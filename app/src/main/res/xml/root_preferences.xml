@@ -1,0 +1,101 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory android:title="Visualización">
+
+        <SwitchPreference
+            android:key="tema"
+            android:title="Tema"
+            android:summary="Cambia el tema de la aplicación"
+            android:defaultValue="true" />
+
+        <ListPreference
+            android:key="fuente"
+            android:title="Tamaño de Letra"
+            android:summary="Selecciona el tamaño de la letra"
+            android:entries="@array/tamanos_letra_entries"
+            android:entryValues="@array/tamanos_letra_values"
+            android:defaultValue="2" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Ordenación">
+
+        <ListPreference
+            android:key="criterio"
+            android:title="Criterio"
+            android:summary="Cambia el criterio de ordenación"
+            android:entries="@array/criterios_entries"
+            android:entryValues="@array/criterios_values"
+            android:defaultValue="2" />
+
+        <SwitchPreference
+            android:key="orden"
+            android:title="Orden"
+            android:summary="Cambia el orden de presentación"
+            android:defaultValue="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="Almacenamiento">
+
+        <CheckBoxPreference
+            android:key="sd"
+            android:title="Almacenamiento en tarjeta SD"
+            android:summary="Guarda archivos adjuntos en la tarjeta SD si está presente"
+            android:defaultValue="false" />
+
+        <EditTextPreference
+            android:key="limpieza"
+            android:title="Limpieza de archivos"
+            android:summary="Elimina archivos antiguos después de ciertos días"
+            android:inputType="number"
+            android:defaultValue="0" />
+
+        <SwitchPreference
+            android:key="bd"
+            android:title="Base de Datos"
+            android:summary="Conexión a base de datos externa MySQL o MariaDB"
+            android:defaultValue="false" />
+
+        <PreferenceCategory
+            android:dependency="bd"
+            android:title="Base de Datos Externa">
+
+            <EditTextPreference
+                android:key="nombrebd"
+                android:title="Nombre Base de Datos"
+                android:summary="Recoge el nombre de la base de datos externa"
+                android:defaultValue="bd" />
+
+            <EditTextPreference
+                android:key="ip"
+                android:title="IP"
+                android:summary="Almacena la dirección IP o URL del servidor de base de datos"
+                android:defaultValue="10.0.2.2" />
+
+            <EditTextPreference
+                android:key="puerto"
+                android:title="Puerto"
+                android:summary="Recoge el número de puerto"
+                android:defaultValue="1001" />
+
+            <EditTextPreference
+                android:key="usuario"
+                android:title="Usuario"
+                android:summary="Almacena el nombre de usuario de la base de datos"
+                android:defaultValue="usuario" />
+
+            <EditTextPreference
+                android:key="password"
+                android:title="Contraseña"
+                android:summary="Almacena la contraseña del usuario"
+                android:defaultValue=""
+                android:inputType="textPassword" />
+        </PreferenceCategory>
+
+    </PreferenceCategory>
+
+    <Preference
+        android:key="reset_button"
+        android:title="Restablecer Preferencias"
+        android:summary="Restablece las preferencias a los valores predeterminados"
+        />
+</PreferenceScreen>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menuItemAnadirTareas"
+        android:icon="@drawable/baseline_add_task_24"
+        android:title="@string/creartarea"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/menuItemFavoritas"
+        android:icon="@drawable/baseline_star_border_24"
+        android:title="@string/favorita"
+        app:showAsAction="ifRoom|withText" />
+    <item
+        android:id="@+id/menuItemSalir"
+        android:title="@string/salir" />
+    <item
+        android:id="@+id/menuItemAcercaDe"
+        android:title="@string/acerca_de" />
+
+    <item
+        android:id="@+id/menuItemPreferencias"
+        android:title="Preferencias" />
+</menu>

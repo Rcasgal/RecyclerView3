@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <EditText
+        android:id="@+id/editTextDescripcion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/descripci_n"
+        android:inputType="textMultiLine"
+        android:minLines="4" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:maxHeight="300dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewTitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/t_tulo" />
+
+            <TextView
+                android:id="@+id/textViewFechaCreacion"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha_de_creaci_n" />
+
+            <TextView
+                android:id="@+id/textViewFechaObjetivo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/fecha_objetivo" />
+
+            <CheckBox
+                android:id="@+id/checkBoxPrioritaria"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/prioritaria2" />
+
+            <Spinner
+                android:id="@+id/spinnerProgreso"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/progreso_options" />
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnGuardar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/guardar" />
+
+        <Button
+            android:id="@+id/btnVolver"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/volver" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,18 @@
+<resources>
+    <color name="navy_blue">#297f96</color> <!-- Azul marino más claro -->
+    <color name="orange_yellow">#FFA500</color> <!-- Naranja/amarillo huevo -->
+    <color name="charcoal_black">#000000</color> <!-- Negro -->
+    <color name="red_dim">#FF9999</color> <!-- Rojo apagado -->
+    <color name="red_dark">#FF6666</color> <!-- Rojo oscuro -->
+    <color name="yellow">#FFFF00</color> <!-- Amarillo -->
+    <color name="yellow_dark">#FFD700</color> <!-- Amarillo oscuro -->
+    <color name="purple_500">#6200EE</color>
+    <color name="purple_700">#3700B3</color>
+    <color name="teal_200">#03DAC5</color>
+    <color name="teal_700">#018786</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="purple_200">#800080</color>
+    <color name="navy_blue_dark">#000E1A</color> <!-- Azul marino oscuro -->
+    <color name="orange_yellow_dark">#FF8C00</color> <!-- Naranja/amarillo huevo oscuro -->
+</resources>

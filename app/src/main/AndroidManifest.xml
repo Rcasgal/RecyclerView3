@@ -1,0 +1,40 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="iestrassierra.pmdm.recyclerview">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/tarea_icon"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/tarea_icon"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.RecyclerView"
+        android:configChanges="orientation|screenSize">
+
+        <activity android:name=".CrearTareaActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".EditarTareaActivity"
+                  android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".ListadoTareasActivity"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".PreferenciasActivity"
+            android:exported="true">
+        </activity>
+
+    </application>
+
+</manifest>

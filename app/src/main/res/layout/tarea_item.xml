@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/prioritariaImageView"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:src="@drawable/prioritaria_icon" />
+
+    <TextView
+        android:id="@+id/diasTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/prioritariaImageView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="304dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:text="@string/quedan_x_d_as"
+        android:textColor="@android:color/black" />
+
+    <!-- Barra de progreso (ProgressBar) -->
+    <TextView
+        android:id="@+id/tituloTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/prioritariaImageView"
+        android:layout_marginStart="6dp"
+        android:layout_marginTop="6dp"
+        android:layout_toEndOf="@id/prioritariaImageView"
+        android:text="@string/t_tulo_de_la_tarea2" />
+
+    <ProgressBar
+        android:id="@+id/progresoProgressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="111dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tituloTextView"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="16dp"
+        android:max="100" />
+
+    <!-- Fecha día objetivo (TextView) -->
+    <TextView
+        android:id="@+id/fechaTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progresoProgressBar"
+        android:layout_alignStart="@id/progresoProgressBar"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="207dp"
+        android:layout_marginBottom="3dp"
+        android:text="@string/fecha_objetivo_dd_mm_yyyy" />
+
+   >
+
+</RelativeLayout>
+

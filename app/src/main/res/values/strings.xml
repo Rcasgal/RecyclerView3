@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">TrassTarea</string>
+    <string name="título">Capitales del mundo</string>
+    <string name="Boton">Cerrar</string>
+    <string name="checkbox">Favorita</string>
+    <string name="tvHab">1000000</string>
+    <string name="tvCap">Capital</string>
+    <string name="no_hay_tareas_disponibles">No hay tareas disponibles</string>
+    <string name="acerca_de">Acerca De ...</string>
+    <string name="salir">Salir</string>
+    <string name="item">Item</string>
+    <string name="favorita">Favorita</string>
+    <string name="creartarea">CrearTarea</string>
+    <string name="t_tulo_de_la_tarea">Título de la tarea</string>
+    <string name="fecha_de_creaci_n_de_la_tarea">Fecha de creación de la tarea</string>
+    <string name="fecha_objetivo_de_la_tarea">Fecha objetivo de la tarea</string>
+    <string name="prioritaria">Prioritaria</string>
+    <string name="siguiente">Siguiente</string>
+    <string name="empezar">EMPEZAR</string>
+    <string name="tus_tareas_tu_ritmo_tu_xito">Tus tareas, tu ritmo, tu éxito</string>
+    <string name="a_adir_tarea">Añadir Tarea</string>
+    <string name="volver">VOLVER</string>
+    <string name="guardar">Guardar</string>
+    <string name="prioritaria2">Prioritaria</string>
+    <string name="t_tulo">Título</string>
+    <string name="fecha_de_creaci_n">Fecha de Creación</string>
+    <string name="fecha_objetivo">Fecha Objetivo</string>
+    <string name="descripci_n">Descripción</string>
+    <string name="quedan_x_d_as">Quedan: X días</string>
+    <string name="t_tulo_de_la_tarea2">Título de la tarea</string>
+    <string name="fecha_objetivo_dd_mm_yyyy">Fecha objetivo: DD/MM/YYYY</string>
+    <string name="edicion_exitosa">La tarea se ha editado correctamente</string>
+    <string name="creacion_exitosa">La tarea se ha creado correctamente</string>
+    <string name="creacion_fallida">La tarea no ha podido ser creada</string>
+    <string name="info_autor">IES Trassierra \n Autor: Ruben Castro Galindo \n Año: 2023</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="cerrar">Cerrar</string>
+    <string name="eliminacion_exitosa">Tarea eliminada correctamente</string>
+    <string name="eliminacion_fallida">La tarea no se pudo eliminar</string>
+    <string name="campos_vacios">Se deben rellenar todos los campos</string>
+
+    <string-array name="progreso_options">
+        <item>No iniciada</item>
+        <item>Iniciada</item>
+        <item>Avanzada</item>
+        <item>Casi finalizada</item>
+        <item>Finalizada</item>
+    </string-array>
+</resources>
