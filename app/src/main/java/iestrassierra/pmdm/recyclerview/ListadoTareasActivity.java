@@ -115,29 +115,6 @@ public class ListadoTareasActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_tareas);
 
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this);
-
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-
-        editor.putBoolean("tema", true);
-        editor.putString("fuente", "2");
-
-        editor.putString("criterio", "2");
-        editor.putBoolean("orden", true);
-
-        editor.putBoolean("sd", false);
-        editor.putString("limpieza", "0");
-        editor.putBoolean("bd", false);
-
-        editor.putString("nombrebd", "bd");
-        editor.putString("ip", "10.0.2.2");
-        editor.putString("puerto", "1001");
-        editor.putString("usuario", "usuario");
-        editor.putString("password", "");
-
-        editor.apply(); 
-
-
 
         recyclerViewTareas = findViewById(R.id.recyclerViewTareas);
         textViewNoTareas = findViewById(R.id.textViewNoTareas);
@@ -332,7 +309,26 @@ public class ListadoTareasActivity extends AppCompatActivity {
 
             case R.id.menuItemPreferencias:
 
-                startActivity(new Intent(this, PreferenciasActivity.class));
+                lanzador = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
+                        new ActivityResultCallback<ActivityResult>() {
+                            @Override
+                            public void onActivityResult(ActivityResult result) {
+                                if (result.getResultCode() == RESULT_OK) {
+                                    Intent intentDevuelto = result.getData();
+                                    Tarea tareaNueva = (Tarea) intentDevuelto.getExtras().get("TareaNueva");
+                                    if (añadirTarea(tareaNueva) == 0) {
+
+                                        Toast.makeText(getApplicationContext(), getString(R.string.edicion_exitosa), Toast.LENGTH_SHORT).show();
+
+                                    } else {
+
+                                        Toast.makeText(getApplicationContext(), getString(R.string.creacion_exitosa), Toast.LENGTH_SHORT).show();
+
+                                    }
+
+                                }
+                            }
+                        });
 
             default:
                 return super.onOptionsItemSelected(item);

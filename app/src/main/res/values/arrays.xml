@@ -16,11 +16,11 @@
         <item>Grande</item>
     </string-array>
 
-    <integer-array name="tamanos_letra_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-    </integer-array>
+    <string-array name="tamanos_letra_values">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+    </string-array>
 
     <string-array name="criterios_entries">
         <item>Alfabético</item>
@@ -29,11 +29,11 @@
         <item>Progreso</item>
     </string-array>
 
-    <integer-array name="criterios_values">
-        <item>1</item>
-        <item>2</item>
-        <item>3</item>
-        <item>4</item>
-    </integer-array>
+    <string-array name="criterios_values">
+        <item>a</item>
+        <item>b</item>
+        <item>c</item>
+        <item>d</item>
+    </string-array>
 
 </resources>

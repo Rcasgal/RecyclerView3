@@ -6,12 +6,15 @@
             android:key="tema"
             android:title="Tema"
             android:summary="Cambia el tema de la aplicación"
-            android:defaultValue="true" />
+            android:icon="@drawable/baseline_dark_mode_24"
+        android:defaultValue="false" />
+
 
         <ListPreference
             android:key="fuente"
             android:title="Tamaño de Letra"
             android:summary="Selecciona el tamaño de la letra"
+            android:icon="@drawable/baseline_font_download_24"
             android:entries="@array/tamanos_letra_entries"
             android:entryValues="@array/tamanos_letra_values"
             android:defaultValue="2" />
@@ -23,6 +26,7 @@
             android:key="criterio"
             android:title="Criterio"
             android:summary="Cambia el criterio de ordenación"
+            android:icon="@drawable/baseline_filter_list_24"
             android:entries="@array/criterios_entries"
             android:entryValues="@array/criterios_values"
             android:defaultValue="2" />
@@ -31,7 +35,7 @@
             android:key="orden"
             android:title="Orden"
             android:summary="Cambia el orden de presentación"
-            android:defaultValue="true" />
+            android:defaultValue="false" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Almacenamiento">
@@ -40,6 +44,7 @@
             android:key="sd"
             android:title="Almacenamiento en tarjeta SD"
             android:summary="Guarda archivos adjuntos en la tarjeta SD si está presente"
+            android:icon="@drawable/baseline_sd_card_24"
             android:defaultValue="false" />
 
         <EditTextPreference
@@ -53,6 +58,7 @@
             android:key="bd"
             android:title="Base de Datos"
             android:summary="Conexión a base de datos externa MySQL o MariaDB"
+            android:icon="@drawable/baseline_storage_24"
             android:defaultValue="false" />
 
         <PreferenceCategory
@@ -87,15 +93,19 @@
                 android:key="password"
                 android:title="Contraseña"
                 android:summary="Almacena la contraseña del usuario"
+
                 android:defaultValue=""
                 android:inputType="textPassword" />
         </PreferenceCategory>
 
     </PreferenceCategory>
 
-    <Preference
-        android:key="reset_button"
-        android:title="Restablecer Preferencias"
-        android:summary="Restablece las preferencias a los valores predeterminados"
-        />
+    <PreferenceCategory android:title="Restablecer Preferencias">
+        <Preference
+            android:key="reset_preferences"
+            android:title="Restablecer Preferencias"
+            android:summary="Restablece todas las preferencias a sus valores predeterminados"
+            android:icon="@drawable/baseline_undo_24" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
