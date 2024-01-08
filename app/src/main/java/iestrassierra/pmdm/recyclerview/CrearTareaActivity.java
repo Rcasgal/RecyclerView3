@@ -3,6 +3,7 @@ package iestrassierra.pmdm.recyclerview;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.widget.DatePicker;
@@ -14,6 +15,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.preference.PreferenceManager;
 
 import com.google.android.material.textfield.TextInputEditText;
 
@@ -34,6 +36,17 @@ public class CrearTareaActivity extends AppCompatActivity implements PrimerFragm
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear_tarea);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String tamanoFuente = prefs.getString("tamanoLetra", "default");
+
+        if (tamanoFuente.equals("a")) {
+            setTheme(R.style.AppTheme_Small);
+        } else if (tamanoFuente.equals("b")) {
+            setTheme(R.style.AppTheme_Medium);
+        } else if (tamanoFuente.equals("c")) {
+            setTheme(R.style.AppTheme_Large);
+        }
 
         fragmentManager = getSupportFragmentManager();
         tareaViewModel = new ViewModelProvider(this).get(TareaViewModel.class);

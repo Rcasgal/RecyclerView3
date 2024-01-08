@@ -7,7 +7,7 @@
         android:label="@string/app_name"
         android:roundIcon="@drawable/tarea_icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RecyclerView"
+        android:theme="@style/ModoClaro"
         android:configChanges="orientation|screenSize">
 
         <activity android:name=".CrearTareaActivity"

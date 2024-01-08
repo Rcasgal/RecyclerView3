@@ -88,6 +88,8 @@ public class ListadoTareasActivity extends AppCompatActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
 
+
+
         if (savedInstanceState != null) {
 
             ArrayList<Tarea> restoredList = savedInstanceState.getParcelableArrayList("listaTareas");
@@ -116,6 +118,17 @@ public class ListadoTareasActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listado_tareas);
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String tamanoFuente = prefs.getString("tamanoLetra", "default");
+
+        if (tamanoFuente.equals("a")) {
+            setTheme(R.style.AppTheme_Small);
+        } else if (tamanoFuente.equals("b")) {
+            setTheme(R.style.AppTheme_Medium);
+        } else if (tamanoFuente.equals("c")) {
+            setTheme(R.style.AppTheme_Large);
+        }
 
 
         recyclerViewTareas = findViewById(R.id.recyclerViewTareas);
@@ -356,18 +369,28 @@ public class ListadoTareasActivity extends AppCompatActivity {
     }
 
     @Override
+    protected void onResume() {
+        super.onResume();
+
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String tamanoFuente = prefs.getString("tamanoLetra", "default");
+
+        if (tamanoFuente.equals("a")) {
+            setTheme(R.style.AppTheme_Small);
+        } else if (tamanoFuente.equals("b")) {
+            setTheme(R.style.AppTheme_Medium);
+        } else if (tamanoFuente.equals("c")) {
+            setTheme(R.style.AppTheme_Large);
+        }
+    }
+
+
+
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_listado_tareas, menu);
 
-        if ((getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES) {
 
-            MenuItem miCrearTarea = menu.findItem(R.id.menuItemAnadirTareas);
-            MenuItem miFavoritas = menu.findItem(R.id.menuItemFavoritas);
-
-            miCrearTarea.setIcon(R.drawable.crear_tarea_blanca);
-            miFavoritas.setIcon(R.drawable.estrella_blanca);
-
-        }
 
         return true;
     }
