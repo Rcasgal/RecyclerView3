@@ -40,6 +40,8 @@ public class ListadoTareasActivity extends AppCompatActivity {
     private TareaAdapter tareaAdapter;
     private List<Tarea> listaTareas;
     private ActivityResultLauncher<Intent> lanzador;
+
+    private ActivityResultLauncher<Intent> lanzadorPreferencias;
     private boolean filtrarFav = false;
 
     private SharedPreferences sharedPreferences;
@@ -165,6 +167,8 @@ public class ListadoTareasActivity extends AppCompatActivity {
                         }
                     }
                 });
+
+
     }
 
     private void mostrarDes(String descripcion) {
@@ -309,26 +313,9 @@ public class ListadoTareasActivity extends AppCompatActivity {
 
             case R.id.menuItemPreferencias:
 
-                lanzador = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(),
-                        new ActivityResultCallback<ActivityResult>() {
-                            @Override
-                            public void onActivityResult(ActivityResult result) {
-                                if (result.getResultCode() == RESULT_OK) {
-                                    Intent intentDevuelto = result.getData();
-                                    Tarea tareaNueva = (Tarea) intentDevuelto.getExtras().get("TareaNueva");
-                                    if (añadirTarea(tareaNueva) == 0) {
-
-                                        Toast.makeText(getApplicationContext(), getString(R.string.edicion_exitosa), Toast.LENGTH_SHORT).show();
-
-                                    } else {
-
-                                        Toast.makeText(getApplicationContext(), getString(R.string.creacion_exitosa), Toast.LENGTH_SHORT).show();
-
-                                    }
-
-                                }
-                            }
-                        });
+                Intent intentPref = new Intent(this,PreferenciasActivity.class);
+                startActivity(intentPref);
+                return true;
 
             default:
                 return super.onOptionsItemSelected(item);

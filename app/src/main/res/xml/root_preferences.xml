@@ -17,7 +17,7 @@
             android:icon="@drawable/baseline_font_download_24"
             android:entries="@array/tamanos_letra_entries"
             android:entryValues="@array/tamanos_letra_values"
-            android:defaultValue="2" />
+            android:defaultValue="b" />
     </PreferenceCategory>
 
     <PreferenceCategory android:title="Ordenación">
@@ -29,7 +29,7 @@
             android:icon="@drawable/baseline_filter_list_24"
             android:entries="@array/criterios_entries"
             android:entryValues="@array/criterios_values"
-            android:defaultValue="2" />
+            android:defaultValue="b" />
 
         <SwitchPreference
             android:key="orden"
